@@ -1,10 +1,11 @@
 //program to print the number of one's in the given decimal value after converting it to binary.
 
 #include <stdio.h>
+
 int main()
 {
 	long int n;
-	int remainder;
+	int remainder,i=1;;
 	printf("Enter the decimal number:   ");
 	scanf("%ld",&n);
 	long int bin=0;
@@ -16,7 +17,8 @@ int main()
 		{
 			count++;
 		}
-		bin=(bin*10)+remainder;
+		bin=bin+(remainder*i);
+		i=i*10;
 		n=n/2;
 	}
 	
