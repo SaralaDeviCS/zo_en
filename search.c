@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 int main()
 {
@@ -24,7 +25,8 @@ int main()
 		printf("the number is not found \n");
 		
 	}
-	else{
+	else
+	{
 	printf("%d is found in %d position",n,pos+1);
 	}
 }
