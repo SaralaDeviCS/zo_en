@@ -25,7 +25,7 @@ int main()
 		}
 
 	}
-	for(i=0;i<n;i++)
+  	for(i=0;i<n;i++)
 	{
 		if(a[i][i]==0)
 		{
@@ -42,9 +42,9 @@ int main()
 						break;
 						}
 					}
-					for(k=0;k<n;k++)
+					for(k=0;k<n;k++)  //adds nonzero coloumn
 					{
-						a[k][i]=a[k][i]+a[k][j];
+						a[k][i]=a[k][i]+a[k][j];   
 					}
 					
 					break;
