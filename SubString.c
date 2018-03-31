@@ -11,7 +11,7 @@ int print(char *s,int start, int end)
 	}
 	printf("%s",set);
 }
-int substring(char s[1000])
+int substring(char *s)
 {
 	int l=strlen(s),len=-1,i,j,k,m,start,end,p;
 	char ch;
