@@ -19,7 +19,7 @@ int substring(char *s)
 	{
 		k=0;
 		ch=s[i];
-		for(j=i+1;j<l&&s[j]!=ch&&s[j]>s[j-1];j++)
+		for(j=i+1;j<l&&s[j]!=ch&&s[j]>=s[j-1];j++)
 		{
 			k++;
 		}
@@ -28,18 +28,6 @@ int substring(char *s)
 			start=i;
 			end=j;
 			len=k;
-			for(m=i;m<j&&end==j;m++)
-			{
-				for(p=m+1;p<j;p++)
-				{
-					if(s[m]==s[p])
-					{
-					    break;
-					}
-				}
-				len=p-i;
-				end=p;
-			}
 		}
 	}
 	print(s,start,end);
