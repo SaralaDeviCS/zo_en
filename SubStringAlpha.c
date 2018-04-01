@@ -42,7 +42,6 @@ int substring(char *s)
 			}
 		}
 	}
-	printf("%d %d %d\n",len,start,end);
 	print(s,start,end);
 }
 int main()
