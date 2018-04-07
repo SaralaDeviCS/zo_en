@@ -3,7 +3,7 @@
 int reverse(int k) //to find mirror number. 
 {
     int p=0;
-    while(k>0)
+    while(k>0)  //to find number of digits
     {
         p=(p*10)+(k%10);
         k=k/10;
