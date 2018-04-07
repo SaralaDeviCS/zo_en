@@ -3,7 +3,7 @@
 int reverse(int k) //to find mirror number. 
 {
     int p=0;
-    while(k>0)  
+    while(k>0)
     {
         p=(p*10)+(k%10);
         k=k/10;
@@ -13,18 +13,19 @@ int reverse(int k) //to find mirror number.
 int palindrome(int n)
 {
     int l=1,d=10,front,rear,k,pal,power;
-    while(n>d)// to find the number of digits
+    while(n>d)
     {
         l++;
         d=d*10;
     }
     power=pow(10,l/2);
-    if((n/power)%10==9)  //rounding of if middle element is 9
+    
+    if(l&1) //for odd number of digits
+    {
+        if((n/power)%10==9)  //rounding of if middle element is 9
         {
             n=((n/power)+1)*power;
         }
-    if(l&1) //for odd number of digits
-    {
         k=reverse(n/(power*10));
         pal=n-(n%power)+k;
         if(pal<n)
@@ -34,6 +35,10 @@ int palindrome(int n)
     }  
      else  //for even number of digits
      {
+         if((n*10/power)%100==99)  //rounding of if middle element is 99
+        {
+            n=((n/power)+1)*power;
+        }
         k=reverse(n/power);
         pal=n-(n%power)+k;
         if(pal<n)
